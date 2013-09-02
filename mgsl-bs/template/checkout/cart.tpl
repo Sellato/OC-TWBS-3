@@ -10,10 +10,12 @@
 <?php } ?>
 <?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+  <div>
+    <ol class="breadcrumb">
+	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
+	</ol>
   </div>
   <h1><?php echo $heading_title; ?>
     <?php if ($weight) { ?>
@@ -21,8 +23,8 @@
     <?php } ?>
   </h1>
   <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-    <div class="cart-info">
-      <table>
+    <div class="cart-info table-responsive">
+      <table class="table table-striped table-hover table-bordered">
         <thead>
           <tr>
             <td class="image"><?php echo $column_image; ?></td>

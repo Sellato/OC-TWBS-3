@@ -885,7 +885,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('fade')
 
-      if (!that.$element.parent().length) {
+      if (that.$element.parent().length) {
         that.$element.appendTo(document.body) // don't move modals dom position
       }
 

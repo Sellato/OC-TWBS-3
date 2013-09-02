@@ -23,6 +23,7 @@ nav,
 section,
 summary {
   display: block;
+  clear: both;
 }
 
 audio,
@@ -3254,6 +3255,10 @@ input[type="button"].btn-block {
   background-color: #e5e5e5;
 }
 
+.divider{
+	border-bottom: 1px solid #e7e7e7;
+}
+
 .dropdown-menu > li > a {
   display: block;
   padding: 3px 20px;
@@ -3774,9 +3779,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+padding-left: 0;
+margin-bottom: 0;
+list-style: none;
+}
+
+.nav-links {
+padding-right: 10px;
+list-style: none;
+height: 38px;
+background-color: #f8f8f8;
+border-color: #e7e7e7;
 }
 
 .nav:before,
@@ -4013,7 +4026,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar {
   position: relative;
-  z-index: 1000;
+  z-index: 999;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -4229,6 +4242,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-nav {
   margin: 7.5px -15px;
+  height: 50px;
 }
 
 .navbar-nav > li > a {
@@ -4363,6 +4377,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   float: left;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.nav-text {
+  float: left;
+  padding-top: 10px;
 }
 
 @media (min-width: 768px) {

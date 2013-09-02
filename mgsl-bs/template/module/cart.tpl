@@ -1,5 +1,5 @@
 <a href="#cartModal" data-toggle="modal"><span id="cart-total"><?php echo $text_items; ?></span></a>
-<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 1050">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -54,7 +54,7 @@
 	</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-primary"><a href="<?php echo $checkout; ?>" style="text-decoration: none; color: white"><?php echo $text_checkout; ?></a></button>
 			</div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
