@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
+<html version="HTML+RDFa 1.1" dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <head>
 <meta charset="UTF-8" />
 <title><?php echo $title; ?></title>

@@ -7,17 +7,17 @@
     <?php } ?>
 	</ol>
   </div>
-  <h1><?php echo $heading_title; ?></h1>
-  <div class="product-info">
+  <div itemscope itemtype="http://schema.org/Product" class="product-info">
+  <h1><span itemprop="name"><?php echo $heading_title; ?></span></h1>
     <?php if ($thumb || $images) { ?>
     <div class="left">
       <?php if ($thumb) { ?>
-      <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
+      <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img itemprop="image" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
       <?php } ?>
       <?php if ($images) { ?>
       <div class="image-additional">
         <?php foreach ($images as $image) { ?>
-        <a href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
+        <a href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img itemprop="image" src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
         <?php } ?>
       </div>
       <?php } ?>
@@ -228,7 +228,7 @@
       </div>
       <?php } ?>
     </div>
-  </div>
+  </div> <!--Product info-->
   <div id="tabs" class="htabs"><a href="#tab-description"><?php echo $tab_description; ?></a>
     <?php if ($attribute_groups) { ?>
     <a href="#tab-attribute"><?php echo $tab_attribute; ?></a>
