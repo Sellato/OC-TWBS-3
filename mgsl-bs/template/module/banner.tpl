@@ -1,24 +1,26 @@
-<div id="banner<?php echo $module; ?>" class="banner">
-  <?php foreach ($banners as $banner) { ?>
-  <?php if ($banner['link']) { ?>
-  <div><a href="<?php echo $banner['link']; ?>"><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></a></div>
-  <?php } else { ?>
-  <div><img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" title="<?php echo $banner['title']; ?>" /></div>
-  <?php } ?>
-  <?php } ?>
+
+<div class="banners" style="margin-bottom: 20px">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<a href="project1" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/1.jpg" alt="project">
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<a href="project2" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/2.jpg" alt="project">
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<a href="project3" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/3.jpg" alt="project">
+			</a>
+		</div>
+		<div class="col-md-3 hidden-sm hidden-xs">
+			<a href="project4" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/4.jpg" alt="project">
+			</a>
+		</div>
+	</div>
 </div>
-<script type="text/javascript"><!--
-$(document).ready(function() {
-	$('#banner<?php echo $module; ?> div:first-child').css('display', 'block');
-});
 
-var banner = function() {
-	$('#banner<?php echo $module; ?>').cycle({
-		before: function(current, next) {
-			$(next).parent().height($(next).outerHeight());
-		}
-	});
-}
-
-setTimeout(banner, 2000);
-//--></script>

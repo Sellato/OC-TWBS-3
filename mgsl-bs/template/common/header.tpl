@@ -71,7 +71,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="nav">
     <ul class="nav nav-tabs pull-left">
-      <li class="active"><a href="<?php echo $home; ?>"><?php echo $name; ?></a></li>
+      <li><a style="text-decoration: none" href="//www.mgsuperlabs.co.in/home"><span class="glyphicon glyphicon-home"></span></a></li>
+	  <li class="active"><a href="<?php echo $home; ?>"><?php echo $name; ?></a></li>
       <li><a href="//efl.mgsuperlabs.co.in">EFL</a></li>
 	  <li><a href="tutorials">Tutorials</a></li>
 	  <li><a href="index.php?route=information/contact">Contact</a></li>
@@ -99,7 +100,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
       <li><a href="#">Link</a></li>
     </ul>
 
-	<div class="col-sm-4 col-sm-offset-3">
+	<div class="col-sm-6 col-sm-offset-1">
         <div id="search" class="input-group navbar-form">
           <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" class="form-control" />
           <span class="input-group-btn">
@@ -122,8 +123,33 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
   </div><!-- /.navbar-collapse -->
 </nav>
 </div>
+<!--
+<div class="banners container" style="clear: both; margin-bottom: 20px">
+	<div class="row">
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<a href="project1" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/1.jpg" alt="project">
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<a href="project2" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/2.jpg" alt="project">
+			</a>
+		</div>
+		<div class="col-md-3 col-sm-4 hidden-xs">
+			<a href="project3" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/3.jpg" alt="project">
+			</a>
+		</div>
+		<div class="col-md-3 hidden-sm hidden-xs">
+			<a href="project4" class="thumbnail">
+				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/4.jpg" alt="project">
+			</a>
+		</div>
+	</div>
+</div>-->
 
-<div class="container">
+<div class="container row">
 <?php if ($categories) { ?>
 <div id="cat-menu" class="hidden">
 <nav class="navbar navbar-default" role="navigation">
@@ -146,6 +172,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
     <?php } ?>
   </ul>
   </nav>
+</div>
 </div>
 <?php } ?>
 <div id="notification"></div>

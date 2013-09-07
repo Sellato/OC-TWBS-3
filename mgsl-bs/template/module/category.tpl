@@ -1,4 +1,4 @@
-<div class="nav panel panel-default" role="navigation">
+<div class="panel panel-default left-category">
   <div class="panel-heading"><?php echo $heading_title; ?></div>
   <div class="panel-body">
     <ul class="nav nav-stacked nav-pills">

@@ -1,11 +1,12 @@
 <div class="panel panel-default">
   <div class="panel-heading"><?php echo $heading_title; ?></div>
   <div class="panel-body">
-    <div class="box-product">
+    <div class="row">
       <?php foreach ($products as $product) { ?>
-      <div>
+      <div class="col-md-3">
+	  <div class="product-container">
         <?php if ($product['thumb']) { ?>
-        <div class="image"><a class="thumbnail" href="<?php echo $product['href']; ?>"><img class="img-responsive" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+        <div class="image"><a href="<?php echo $product['href']; ?>"><img class="img-thumbnail" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
         <?php } ?>
         <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
         <?php if ($product['price']) { ?>
@@ -20,8 +21,9 @@
         <?php if ($product['rating']) { ?>
         <div class="rating"><img src="catalog/view/theme/default/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" /></div>
         <?php } ?>
-        <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>
+        <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="btn btn-default" /></div>
       </div>
+	  </div>
       <?php } ?>
     </div>
   </div>
