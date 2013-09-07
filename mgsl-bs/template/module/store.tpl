@@ -1,6 +1,6 @@
-<div class="box">
-  <div class="box-heading"><?php echo $heading_title; ?></div>
-  <div class="box-content">
+<div class="panel panel-default">
+  <div class="panel-heading"><?php echo $heading_title; ?></div>
+  <div class="panel-body">
     <p style="text-align: center;"><?php echo $text_store; ?></p>
     <?php foreach ($stores as $store) { ?>
     <?php if ($store['store_id'] == $store_id) { ?>

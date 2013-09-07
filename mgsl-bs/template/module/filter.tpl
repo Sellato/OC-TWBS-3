@@ -1,6 +1,6 @@
-<div class="box">
-  <div class="box-heading"><?php echo $heading_title; ?></div>
-  <div class="box-content">
+<div class="panel panel-default">
+  <div class="panel-heading"><?php echo $heading_title; ?></div>
+  <div class="panel-body">
     <ul class="box-filter">
       <?php foreach ($filter_groups as $filter_group) { ?>
       <li><span id="filter-group<?php echo $filter_group['filter_group_id']; ?>"><?php echo $filter_group['name']; ?></span>

@@ -1,6 +1,6 @@
-<div class="box">
-  <div class="box-heading"><?php echo $heading_title; ?></div>
-  <div class="box-content">
+<div class="panel panel-default">
+  <div class="panel-heading"><?php echo $heading_title; ?></div>
+  <div class="panel-body">
     <ul>
       <?php foreach ($informations as $information) { ?>
       <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>

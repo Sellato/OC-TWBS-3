@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <title><?php echo $title; ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="<?php echo $base; ?>" />
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />
@@ -25,6 +26,7 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/theme/mgsl-bs/js/common.js"></script>
 <script type="text/javascript" src="catalog/view/theme/mgsl-bs/js/bootstrap.js"></script>
+<script type="text/javascript" src="catalog/view/theme/mgsl-bs/js/holder.js"></script>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/mgsl-bs/stylesheet/bootstrap.css" />
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
@@ -51,7 +53,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php echo $google_analytics; ?>
 </head>
 <body style="margin: 0 10px 0 10px">
-<div class="navigation-bars">
+<div class="navigation-bars container">
 <nav class="nav-links" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
     <div class="nav-text pull-right">
@@ -87,7 +89,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"><?php echo $name; ?></a>
+    <a class="navbar-brand" href="<?php echo $home; ?>"><?php echo $name; ?></a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -97,7 +99,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
       <li><a href="#">Link</a></li>
     </ul>
 
-	<div class="col-sm-4 col-sm-offset-4">
+	<div class="col-sm-4 col-sm-offset-3">
         <div id="search" class="input-group navbar-form">
           <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" class="form-control" />
           <span class="input-group-btn">
@@ -121,6 +123,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 </nav>
 </div>
 
+<div class="container">
 <?php if ($categories) { ?>
 <div id="cat-menu" class="hidden">
 <nav class="navbar navbar-default" role="navigation">

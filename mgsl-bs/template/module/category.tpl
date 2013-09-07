@@ -1,17 +1,19 @@
-<div class="panel panel-default">
+<div class="nav panel panel-default" role="navigation">
   <div class="panel-heading"><?php echo $heading_title; ?></div>
   <div class="panel-body">
     <ul class="nav nav-stacked nav-pills">
       <?php foreach ($categories as $category) { ?>
         <?php if ($category['category_id'] == $category_id) { ?>
 		<li class="active dropdown">
-        <a class="dropdown-toggle" href="<?php echo $category['href']; ?>" class="active"><?php echo $category['name']; ?> <b class="caret"></b></a>
+		<p><a class="active" href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+        <a class="dropdown-toggle active pull-right" data-toggle="dropdown" href="#"><b class="caret"></b></a></p>
         <?php } else { ?>
 		<li class="dropdown">
-        <a class="dropdown-toggle" href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?> <b class="caret"></b></a>
+		<a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+        <a class="dropdown-toggle pull-right" data-toggle="dropdown" href="#"><b class="caret"></b></a>
         <?php } ?>
         <?php if ($category['children']) { ?>
-        <ul class="dropdown-menu">
+        <ul class="nav nav-stacked dropdown-menu">
           <?php foreach ($category['children'] as $child) { ?>
             <?php if ($child['category_id'] == $child_id) { ?>
 			<li class="active">

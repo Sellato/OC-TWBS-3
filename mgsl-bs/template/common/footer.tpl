@@ -1,4 +1,5 @@
-<footer class="bs-footer" role="contentinfo">
+</div> <!--Container-->
+<footer class="bs-footer container" role="contentinfo">
 	<div class="divider"></div>
       <div class="container">
 	  <div class="row">
@@ -41,7 +42,7 @@
       </div>
 	  </div>
     </footer>
-	<div class="well well-sm fixed-bottom" >&copy 2013, MG Automation Technologies. Powered by <a href="//www.mgsuperlabs.com">MG Super LABS</a></div>
+	<div class="well well-sm fixed-bottom container" >&copy 2013, MG Automation Technologies. Powered by <a href="//www.mgsuperlabs.com">MG Super LABS</a></div>
 <div xmlns="http://www.w3.org/1999/xhtml"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -104,7 +105,7 @@
     <div rel="foaf:page" resource=""></div>
   </div>
 </div>
-  <div typeof="gr:BusinessEntity" about="#company">
+<div typeof="gr:BusinessEntity" about="#company">
     <div property="gr:legalName" content="MG Automation Technologies"></div>
     <div property="vcard:tel" content="+919823499661"></div>
     <div rel="vcard:adr">
@@ -117,6 +118,6 @@
     </div>
     <div rel="foaf:logo" resource="http://www.mgsuperlabs.co.in/estore/image/data/Banners/The_20E-store.jpg"></div>
     <div rel="foaf:page" resource=""></div>
-  </div>
+</div>
 </div>
 </body></html>
