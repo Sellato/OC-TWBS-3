@@ -1,9 +1,9 @@
-<div class="panel panel-default">
-  <div class="panel-heading"><?php echo $heading_title; ?></div>
-  <div class="panel-body">
+<div class="container">
+  <div class="h3"><?php echo $heading_title; ?></div>
+  <hr/>
     <div class="row">
       <?php foreach ($products as $product) { ?>
-      <div class="col-md-3">
+      <div class="col-md-2">
 	  <div class="product-container">
         <?php if ($product['thumb']) { ?>
         <div class="image"><a href="<?php echo $product['href']; ?>"><img class="img-thumbnail" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
@@ -26,5 +26,5 @@
 	  </div>
       <?php } ?>
     </div>
-  </div>
+	<hr/>
 </div>

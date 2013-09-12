@@ -8,7 +8,7 @@
     <h3><?php echo $text_information; ?></h3>
     <ul class="list-unstyled">
       <?php foreach ($informations as $information) { ?>
-      <li class=""><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+      <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
       <?php } ?>
     </ul>
   </div>

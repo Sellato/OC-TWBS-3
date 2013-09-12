@@ -1,9 +1,10 @@
-<div class="panel panel-default">
-  <div class="panel-heading"><?php echo $heading_title; ?></div>
-  <div class="panel-body">
-    <div class="box-product">
+<div class="container">
+  <div class="h3"><?php echo $heading_title; ?></div>
+  <hr/>
+    <div class="row">
       <?php foreach ($products as $product) { ?>
-      <div>
+      <div class="col-md-2">
+	  <div class="product-container">
         <?php if ($product['thumb']) { ?>
         <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
         <?php } ?>
@@ -22,7 +23,8 @@
         <?php } ?>
         <div class="cart"><input type="button" value="<?php echo $button_cart; ?>" onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" /></div>
       </div>
+	  </div>
       <?php } ?>
     </div>
-  </div>
+	<hr/>
 </div>

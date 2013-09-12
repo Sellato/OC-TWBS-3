@@ -52,7 +52,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <?php } ?>
 <?php echo $google_analytics; ?>
 </head>
-<body style="margin: 0 10px 0 10px">
+<body>
+<header>
 <div class="navigation-bars container">
 <nav class="nav-links" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -123,31 +124,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
   </div><!-- /.navbar-collapse -->
 </nav>
 </div>
-<!--
-<div class="banners container" style="clear: both; margin-bottom: 20px">
-	<div class="row">
-		<div class="col-md-3 col-sm-4 hidden-xs">
-			<a href="project1" class="thumbnail">
-				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/1.jpg" alt="project">
-			</a>
-		</div>
-		<div class="col-md-3 col-sm-4 hidden-xs">
-			<a href="project2" class="thumbnail">
-				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/2.jpg" alt="project">
-			</a>
-		</div>
-		<div class="col-md-3 col-sm-4 hidden-xs">
-			<a href="project3" class="thumbnail">
-				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/3.jpg" alt="project">
-			</a>
-		</div>
-		<div class="col-md-3 hidden-sm hidden-xs">
-			<a href="project4" class="thumbnail">
-				<img class="img-responsive" data-src="holder.js/240x150" scr="image/data/4.jpg" alt="project">
-			</a>
-		</div>
-	</div>
-</div>-->
+</header>
 
 <div class="container row">
 <?php if ($categories) { ?>
@@ -175,4 +152,4 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 </div>
 </div>
 <?php } ?>
-<div id="notification"></div>
+<div id="alert"></div>

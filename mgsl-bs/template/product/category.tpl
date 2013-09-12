@@ -1,5 +1,6 @@
-<?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
+<?php echo $header; ?>
 <div id="content"><?php echo $content_top; ?>
+  <div class="container">
   <div>
     <ol class="breadcrumb">
 	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -7,11 +8,30 @@
     <?php } ?>
 	</ol>
   </div>
+  <div class="row">
+<?php echo $column_left; ?>
+<?php if ($column_left) { ?>
+<div class="col-md-9">
+<?php } elseif ($column_right) { ?>
+<div class="col-md-9">
+<?php } else { ?>
+<div class="col-md-12">
+<?php } ?>
+<?php echo $content_top; ?>
+<div class="row">
+<?php if ($column_left) { ?>
+<div class="col-md-6">
+  <?php } elseif ($column_right) { ?>
+  <div class="col-md-6">
+    <?php } else { ?>
+    <div class="col-md-8">
+      <?php } ?>
   <h1><?php echo $heading_title; ?></h1>
+  <hr/>
   <?php if ($thumb || $description) { ?>
   <div class="category-info">
     <?php if ($thumb) { ?>
-    <div class="image"><a class="thumbnail" href="#"> <img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
+    <div class="image"><a href="#"> <img class="img-thumbnail" src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
     <?php } ?>
     <?php if ($description) { ?>
     <?php echo $description; ?>
@@ -71,10 +91,9 @@
     <?php foreach ($products as $product) { ?>
     <div>
       <?php if ($product['thumb']) { ?>
-      <div class="image"><a class="thumbnail" href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+      <div class="image"><a href="<?php echo $product['href']; ?>"><img class="img-thumbnail" src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
       <?php } ?>
       <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-	  <div class="description"><?php echo $model; ?></div>
       <div class="description"><?php echo $product['description']; ?></div>
       <?php if ($product['price']) { ?>
       <div class="price">
@@ -108,6 +127,7 @@
   </div>
   <?php } ?>
   <?php echo $content_bottom; ?></div>
+  </div>
 <script type="text/javascript"><!--
 function display(view) {
 	if (view == 'list') {
@@ -150,7 +170,9 @@ function display(view) {
 		$('.display').html('<b><?php echo $text_display; ?></b> <?php echo $text_list; ?> <b>/</b> <a onclick="display(\'grid\');"><?php echo $text_grid; ?></a>');
 		
 		$.totalStorage('display', 'list'); 
-	} else {
+	} 
+	
+	else {
 		$('.product-list').attr('class', 'product-grid');
 		
 		$('.product-grid > div').each(function(index, element) {
