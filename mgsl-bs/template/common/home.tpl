@@ -27,7 +27,9 @@
 
 <div class="container">
 <div class="row">
-<?php echo $column_left; ?><?php echo $content_top; ?><?php echo $column_right; ?>
+<div><?php echo $column_left; ?></div>
+<div class="col-md-8"><?php echo $content_top; ?></div>
+<?php echo $column_right; ?>
 </div>
 </div>
 <div class="container">

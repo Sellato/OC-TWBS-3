@@ -1,6 +1,6 @@
 <div class="container">
   <div class="h3"><?php echo $heading_title; ?></div>
-  <hr/>
+  <hr>
     <div class="row">
       <?php foreach ($products as $product) { ?>
       <div class="col-md-2">
@@ -26,5 +26,5 @@
 	  </div>
       <?php } ?>
     </div>
-	<hr/>
+	<hr>
 </div>

@@ -11,20 +11,20 @@
   <div class="row">
 <?php echo $column_left; ?>
 <?php if ($column_left) { ?>
-<div class="col-md-9">
+<div class="col-md-10">
 <?php } elseif ($column_right) { ?>
-<div class="col-md-9">
+<div class="col-md-8">
 <?php } else { ?>
 <div class="col-md-12">
 <?php } ?>
 <?php echo $content_top; ?>
 <div class="row">
 <?php if ($column_left) { ?>
-<div class="col-md-6">
+<div class="col-md-12">
   <?php } elseif ($column_right) { ?>
-  <div class="col-md-6">
+  <div class="col-md-8">
     <?php } else { ?>
-    <div class="col-md-8">
+    <div class="col-md-10">
       <?php } ?>
   <h1><?php echo $heading_title; ?></h1>
   <hr/>
